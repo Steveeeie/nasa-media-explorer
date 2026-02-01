@@ -58,12 +58,12 @@ Note: This application uses NASA's public images API, which **does not require a
 
 ### Scripts
 
-`npm run dev` — Start dev server
-`npm run build` — Build for production
-`npm run preview` — Preview production build locally
-`npm test` — Run tests (headless)
-`npm run test:ui` — Open Vitest UI
-`npm run test:coverage` — Generate coverage report
+- `npm run dev` - Start dev server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+- `npm test` - Run tests (headless)
+- `npm run test:ui` - Open Vitest UI
+- `npm run test:coverage` - Generate coverage report
 
 ---
 
