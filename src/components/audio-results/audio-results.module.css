@@ -1,0 +1,25 @@
+.group {
+  display: grid;
+  gap: var(--spacing-3);
+  grid-template-columns: 1fr;
+  width: 100%;
+}
+
+.item a {
+  align-items: center;
+  background-color: var(--color-dark);
+  border-radius: var(--spacing-2);
+  display: flex;
+  gap: var(--spacing-2);
+  padding: var(--spacing-4);
+}
+
+.item:hover {
+  filter: brightness(1.5);
+}
+
+@media (min-width: 960px) {
+  .group {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,76 @@
+:root {
+  --color-darker: hsl(0, 0%, 9%);
+  --color-dark: hsl(223, 9%, 15%);
+  --color-red: hsl(7, 96%, 56%);
+  --color-light: hsl(0, 0%, 100%);
+  --color-text-dark: hsl(223, 9%, 15%);
+  --color-text-light: hsl(0, 0%, 100%);
+  --color-text-light-secondary: hsla(0, 0%, 100%, 75%);
+  --color-text-light-disabled: hsla(0, 0%, 100%, 50%);
+  --color-border-light: rgba(255, 255, 255, 0.1);
+  --opacity-disabled: 0.5;
+  --height-input-medium: 40px;
+  --height-input-large: 64px;
+  --radius-1: 8px;
+  --radius-2: 16px;
+  --radius-full: 100px;
+  --spacing-1: 8px;
+  --spacing-2: 16px;
+  --spacing-3: 24px;
+  --spacing-4: 32px;
+  --spacing-5: 48px;
+  --font-size-tiny: 12px;
+  --font-size-small: 14px;
+  --font-size-default: 16px;
+  --font-size-input: 18px;
+  --font-size-lead: 22px;
+  --font-weight-light: 200;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --width-container-medium: 1024px;
+  --width-container-large: 1280px;
+}
+
+*,
+*::before,
+*::after {
+  border: 0;
+  box-sizing: border-box;
+  color: inherit;
+  font: inherit;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  text-decoration: none;
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 2px;
+}
+
+body {
+  background-color: var(--color-darker);
+  color: var(--color-text-light);
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-size: var(--font-size-default);
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.sr-only {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}

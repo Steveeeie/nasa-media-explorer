@@ -1,0 +1,17 @@
+.group ul {
+  display: flex;
+  gap: var(--spacing-3);
+}
+
+.item {
+  display: inline-flex;
+  color: var(--color-text-light-disabled);
+  border-bottom: 2px solid transparent;
+  padding-block: var(--spacing-1);
+  font-weight: var(--font-weight-medium);
+}
+
+.item.active {
+  color: var(--color-text-light);
+  border-color: currentColor;
+}

@@ -1,0 +1,22 @@
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+  justify-content: center;
+  list-style: none;
+  max-width: 540px;
+}
+
+.suggestion {
+  align-items: center;
+  background-color: var(--color-dark);
+  border-radius: var(--radius-1);
+  color: var(--color-text-light-secondary);
+  display: inline-flex;
+  height: var(--height-input-medium);
+  padding-inline: var(--spacing-2);
+}
+
+.suggestion:hover {
+  filter: brightness(1.5);
+}

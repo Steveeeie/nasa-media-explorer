@@ -1,0 +1,47 @@
+.wrapper {
+  left: 50;
+  left: 50%;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  transform: translate3D(-50%, -50%, 0);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.wrapper.shown {
+  opacity: 1;
+}
+
+.loading {
+  animation: rotation 1s linear infinite;
+  border-radius: 50%;
+  border: 3px solid var(--color-text-light);
+  box-sizing: border-box;
+  display: inline-block;
+  height: 48px;
+  position: relative;
+  width: 48px;
+}
+
+.loading::after {
+  background: var(--color-red);
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "";
+  height: 16px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translate(-50%, 50%);
+  width: 16px;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

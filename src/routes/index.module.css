@@ -1,0 +1,43 @@
+.wrapper {
+  align-items: flex-end;
+  background-color: #131314;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 640px;
+  height: 100svh;
+  flex: none;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  inset: 0;
+  padding-block: var(--spacing-5);
+  padding-inline: var(--spacing-3);
+  position: absolute;
+  z-index: 1;
+  gap: var(--spacing-4);
+}
+
+.logo {
+  width: 128px;
+}
+
+.intro {
+  font-size: var(--font-size-lead);
+  text-align: center;
+}
+
+@media (min-width: 640px) {
+  .content {
+    padding-top: 20vh;
+    gap: var(--spacing-4);
+  }
+
+  .logo {
+    width: 200px;
+  }
+}

@@ -1,0 +1,33 @@
+.group {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-4);
+  justify-content: center;
+  list-style: none;
+  margin: 0 auto;
+}
+
+.button {
+  align-items: center;
+  background-color: var(--color-dark);
+  border-radius: var(--radius-full);
+  color: var(--color-text-light-secondary);
+  display: inline-flex;
+  height: var(--height-input-medium);
+  padding-inline: var(--spacing-2);
+}
+
+.button:not(:disabled):hover {
+  filter: brightness(1.5);
+}
+
+.button[aria-disabled] {
+  opacity: var(--opacity-disabled);
+  pointer-events: none;
+}
+
+.info {
+  color: var(--color-text-light-secondary);
+  font-size: var(--font-size-small);
+}

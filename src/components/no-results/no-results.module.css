@@ -1,0 +1,19 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.message {
+  animation: fadeIn 0.3s linear forwards;
+  color: var(--color-text-light-disabled);
+  font-size: var(--font-size-lead);
+  font-weight: var(--font-weight-medium);
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate3D(-50%, -50%, 0);
+}

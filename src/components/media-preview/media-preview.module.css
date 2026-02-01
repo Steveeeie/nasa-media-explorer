@@ -1,0 +1,23 @@
+.wrapper {
+  background-color: black;
+  border-radius: var(--radius-2);
+  display: flex;
+  justify-content: center;
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+.wrapper video,
+.wrapper img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+}
+
+.wrapper audio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+}

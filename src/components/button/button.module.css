@@ -1,0 +1,29 @@
+.button {
+  align-items: center;
+  border-radius: var(--radius-1);
+  cursor: pointer;
+  display: inline-flex;
+  flex: none;
+  gap: var(--spacing-1);
+  height: var(--height-input-medium);
+  padding-inline: var(--spacing-2);
+  font-weight: var(--font-weight-medium);
+}
+
+.button.primary {
+  background-color: var(--color-light);
+  color: var(--color-text-dark);
+}
+
+.button.primary:hover {
+  filter: brightness(0.75);
+}
+
+.button.secondary {
+  background-color: var(--color-dark);
+  color: var(--color-text-light-secondary);
+}
+
+.button.secondary:hover {
+  filter: brightness(1.5);
+}

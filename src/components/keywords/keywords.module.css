@@ -1,0 +1,21 @@
+.keywords {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-1);
+  justify-content: flex-start;
+  list-style: none;
+}
+
+.keyword {
+  align-items: center;
+  background-color: var(--color-dark);
+  border-radius: var(--radius-1);
+  color: var(--color-text-light-secondary);
+  display: inline-flex;
+  padding: var(--spacing-1);
+  font-size: var(--font-size-small);
+}
+
+.keyword:hover {
+  filter: brightness(1.5);
+}
