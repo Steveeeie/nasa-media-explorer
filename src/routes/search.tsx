@@ -39,6 +39,7 @@ function Search() {
         <div className={styles.form}>
           <Link to="/">
             <img
+              className={styles.logo}
               src={`${import.meta.env.BASE_URL}logo-worm.svg`}
               alt="NASA"
               width={142}

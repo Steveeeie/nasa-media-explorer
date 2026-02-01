@@ -2,12 +2,12 @@
   align-items: flex-end;
   background-color: #131314;
   display: flex;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-  min-height: 640px;
-  height: 100svh;
   flex: none;
+  height: 100vh;
+  justify-content: center;
+  min-height: 640px;
+  overflow: hidden;
+  position: relative;
 }
 
 .content {

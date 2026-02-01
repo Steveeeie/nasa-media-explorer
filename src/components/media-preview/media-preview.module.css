@@ -3,16 +3,18 @@
   border-radius: var(--radius-2);
   display: flex;
   justify-content: center;
-  height: 50vh;
-  width: 100%;
+  min-height: 50vh;
   position: relative;
+  width: 100%;
 }
+
 .wrapper video,
 .wrapper img {
-  position: absolute;
-  top: 0;
   bottom: 0;
   height: 100%;
+  max-width: 100%;
+  position: absolute;
+  top: 0;
 }
 
 .wrapper audio {

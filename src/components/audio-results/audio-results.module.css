@@ -1,7 +1,7 @@
 .group {
   display: grid;
-  gap: var(--spacing-3);
-  grid-template-columns: 1fr;
+  gap: var(--spacing-2);
+  grid-template-columns: 100%;
   width: 100%;
 }
 
@@ -10,8 +10,12 @@
   background-color: var(--color-dark);
   border-radius: var(--spacing-2);
   display: flex;
+  font-size: var(--font-size-small);
   gap: var(--spacing-2);
-  padding: var(--spacing-4);
+  max-width: 100%;
+  overflow: hidden;
+  padding: var(--spacing-3);
+  word-wrap: break-word;
 }
 
 .item:hover {
@@ -21,5 +25,11 @@
 @media (min-width: 960px) {
   .group {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-3);
+  }
+
+  .item a {
+    gap: var(--spacing-2);
+    padding: var(--spacing-4);
   }
 }

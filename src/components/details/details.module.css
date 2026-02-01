@@ -19,6 +19,8 @@
 .heading {
   font-size: var(--font-size-lead);
   font-weight: var(--font-weight-medium);
+  max-width: 100%;
+  word-wrap: break-word;
 }
 
 .description {
