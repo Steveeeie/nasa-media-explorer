@@ -2,6 +2,10 @@
 
 A React-based application that allows users to explore NASA's multimedia library.
 
+[View Demo](https://www.stevemeredith.com/nasa-media-explorer/)
+
+---
+
 ![NASA Media Explorer Screenshot](screenshot.png)
 
 ---
