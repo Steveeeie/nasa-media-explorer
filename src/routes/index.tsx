@@ -1,8 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SearchForm } from "@/components/search-form";
+import { About } from "@/components/about";
 import { Moon } from "@/components/moon";
-import styles from "./index.module.css";
+import { SearchForm } from "@/components/search-form";
 import { Suggestions } from "@/components/suggestions";
+import styles from "./index.module.css";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -24,7 +25,7 @@ const suggestions = [
 
 function Home() {
   return (
-    <div className={styles.wrapper}>
+    <>
       <main className={styles.content}>
         <img
           className={styles.logo}
@@ -53,9 +54,11 @@ function Home() {
             </Suggestions.Item>
           ))}
         </Suggestions>
+
+        <About />
       </main>
 
       <Moon />
-    </div>
+    </>
   );
 }

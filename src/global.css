@@ -19,6 +19,7 @@
   --spacing-3: 24px;
   --spacing-4: 32px;
   --spacing-5: 48px;
+  --spacing-6: 64px;
   --font-size-tiny: 12px;
   --font-size-small: 14px;
   --font-size-default: 16px;
@@ -58,10 +59,8 @@ body {
   font-size: var(--font-size-default);
   font-weight: var(--font-weight-regular);
   font-style: normal;
-  line-height: 1.5;
+  line-height: 1.75;
   -webkit-font-smoothing: antialiased;
-  -moz-font-smoothing: antialiased;
-  -o-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 

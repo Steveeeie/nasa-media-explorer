@@ -2,7 +2,7 @@
   align-items: center;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-4);
+  gap: var(--spacing-2);
   justify-content: center;
   list-style: none;
   margin: 0 auto;
@@ -12,6 +12,7 @@
   align-items: center;
   background-color: var(--color-dark);
   border-radius: var(--radius-full);
+  border: 1px solid var(--color-border-light);
   color: var(--color-text-light-secondary);
   display: inline-flex;
   height: var(--height-input-medium);
@@ -30,4 +31,14 @@
 .info {
   color: var(--color-text-light-secondary);
   font-size: var(--font-size-small);
+}
+
+@media (min-width: 1024px) {
+  .group {
+    gap: var(--spacing-3);
+  }
+
+  .button {
+    padding-inline: var(--spacing-3);
+  }
 }

@@ -10,8 +10,9 @@
 .suggestion {
   align-items: center;
   background-color: var(--color-dark);
+  border: 1px solid var(--color-border-light);
   border-radius: var(--radius-1);
-  color: var(--color-text-light-secondary);
+  color: var(--color-text-light);
   display: inline-flex;
   height: var(--height-input-medium);
   padding-inline: var(--spacing-2);
