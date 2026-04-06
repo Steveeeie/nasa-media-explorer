@@ -1,3 +1,8 @@
+.wrapper {
+  min-height: 100lvh;
+  position: relative;
+}
+
 .content {
   align-items: center;
   display: flex;

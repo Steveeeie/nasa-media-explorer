@@ -3,6 +3,7 @@ import { About } from "@/components/about";
 import { Moon } from "@/components/moon";
 import { SearchForm } from "@/components/search-form";
 import { Suggestions } from "@/components/suggestions";
+import { useNoScroll } from "@/hooks/use-no-scroll";
 import styles from "./index.module.css";
 
 export const Route = createFileRoute("/")({
@@ -30,8 +31,10 @@ const suggestions: Suggestion[] = [
 ];
 
 function Home() {
+  useNoScroll();
+
   return (
-    <>
+    <div className={styles.wrapper}>
       <main className={styles.content}>
         <img
           className={styles.logo}
@@ -65,6 +68,6 @@ function Home() {
       </main>
 
       <Moon />
-    </>
+    </div>
   );
 }
