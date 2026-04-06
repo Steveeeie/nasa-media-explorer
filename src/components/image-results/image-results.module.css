@@ -13,6 +13,11 @@
   opacity: 1;
 }
 
+.item a {
+  border-radius: var(--radius-2);
+  display: block;
+}
+
 .imageWrapper {
   border-radius: var(--radius-2);
   overflow: hidden;
