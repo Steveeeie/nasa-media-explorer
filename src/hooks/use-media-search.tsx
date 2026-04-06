@@ -9,15 +9,31 @@ interface NasaMediaSearchArgs {
   query: string;
   page: number;
   type: NasaMediaType;
+  yearStart?: number;
+  yearEnd?: number;
 }
 
-async function nasaMediaSearch({ query, type, page }: NasaMediaSearchArgs) {
+async function nasaMediaSearch({
+  query,
+  type,
+  page,
+  yearStart,
+  yearEnd,
+}: NasaMediaSearchArgs) {
   const url = new URL("https://images-api.nasa.gov/search");
 
   url.searchParams.set("q", query);
   url.searchParams.set("media_type", type);
   url.searchParams.set("page", page.toString());
   url.searchParams.set("page_size", RESULTS_PER_PAGE.toString());
+
+  if (yearStart) {
+    url.searchParams.set("year_start", yearStart.toString());
+  }
+
+  if (yearEnd) {
+    url.searchParams.set("year_end", yearEnd.toString());
+  }
 
   const response = await fetch(url);
 
@@ -52,10 +68,16 @@ async function nasaMediaSearch({ query, type, page }: NasaMediaSearchArgs) {
   };
 }
 
-function useNasaMediaSearch({ query, type, page }: NasaMediaSearchArgs) {
+function useNasaMediaSearch({
+  query,
+  type,
+  page,
+  yearStart,
+  yearEnd,
+}: NasaMediaSearchArgs) {
   return useQuery({
-    queryKey: ["search", query, type, page],
-    queryFn: () => nasaMediaSearch({ query, type, page }),
+    queryKey: ["search", query, type, page, yearStart, yearEnd],
+    queryFn: () => nasaMediaSearch({ query, type, page, yearStart, yearEnd }),
     enabled: !!query,
   });
 }

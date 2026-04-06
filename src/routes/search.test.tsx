@@ -238,4 +238,22 @@ describe("Search", () => {
     await expect.element(screen.getByText("Next")).not.toBeInTheDocument();
     await expect.element(screen.getByText("Previous")).not.toBeInTheDocument();
   });
+
+  test("filters preserve date range when switching types", async () => {
+    const { screen, router } = await renderWithRouter({
+      initialEntries: ["/search?query=Artemis&yearStart=2026&yearEnd=2026"],
+    });
+
+    await userEvent.click(screen.getByRole("link", { name: "Videos" }));
+
+    await expect
+      .poll(() => router.state.location.search)
+      .toMatchObject({ query: "Artemis", type: "video", yearStart: 2026, yearEnd: 2026 });
+
+    await userEvent.click(screen.getByRole("link", { name: "Audio" }));
+
+    await expect
+      .poll(() => router.state.location.search)
+      .toMatchObject({ query: "Artemis", type: "audio", yearStart: 2026, yearEnd: 2026 });
+  });
 });

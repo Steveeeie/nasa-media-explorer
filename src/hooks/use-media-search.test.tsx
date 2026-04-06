@@ -11,9 +11,13 @@ function TestComponent() {
     page: 1,
   });
 
-  if (isLoading) return <p>Loading</p>;
+  if (isLoading) {
+    return <p>Loading</p>;
+  }
 
-  if (isError) return <p>Error</p>;
+  if (isError) {
+    return <p>Error</p>;
+  }
 
   return <p>Success</p>;
 }

@@ -23,12 +23,20 @@ export const Route = createFileRoute("/search")({
 });
 
 function Search() {
-  const { query, page = 1, type = "image" } = Route.useSearch();
+  const {
+    query,
+    page = 1,
+    type = "image",
+    yearStart,
+    yearEnd,
+  } = Route.useSearch();
 
   const { data, isLoading, isError } = useNasaMediaSearch({
     query,
     page,
     type,
+    yearStart,
+    yearEnd,
   });
 
   const hasResults = Boolean(data?.totalResults);
@@ -54,21 +62,36 @@ function Search() {
         <Filters label="Filter By Type">
           <Filters.Item
             active={type === "image"}
-            search={({ query }) => ({ query, type: "image" })}
+            search={({ query, yearStart, yearEnd }) => ({
+              query,
+              type: "image",
+              yearStart,
+              yearEnd,
+            })}
           >
             Images
           </Filters.Item>
 
           <Filters.Item
             active={type === "video"}
-            search={({ query }) => ({ query, type: "video" })}
+            search={({ query, yearStart, yearEnd }) => ({
+              query,
+              type: "video",
+              yearStart,
+              yearEnd,
+            })}
           >
             Videos
           </Filters.Item>
 
           <Filters.Item
             active={type === "audio"}
-            search={({ query }) => ({ query, type: "audio" })}
+            search={({ query, yearStart, yearEnd }) => ({
+              query,
+              type: "audio",
+              yearStart,
+              yearEnd,
+            })}
           >
             Audio
           </Filters.Item>

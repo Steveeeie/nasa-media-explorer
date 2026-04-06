@@ -9,18 +9,24 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const suggestions = [
-  "Mercury",
-  "Venus",
-  "Earth",
-  "Mars",
-  "Jupiter",
-  "Saturn",
-  "Uranus",
-  "Neptune",
-  "Pluto",
-  "Moon",
-  "Europa",
+interface Suggestion {
+  query: string;
+  yearStart?: number;
+  yearEnd?: number;
+}
+
+const suggestions: Suggestion[] = [
+  { query: "Artemis", yearStart: 2026, yearEnd: 2026 },
+  { query: "Mercury" },
+  { query: "Venus" },
+  { query: "Earth" },
+  { query: "Mars" },
+  { query: "Jupiter" },
+  { query: "Saturn" },
+  { query: "Uranus" },
+  { query: "Neptune" },
+  { query: "Pluto" },
+  { query: "Moon" },
 ];
 
 function Home() {
@@ -44,13 +50,13 @@ function Home() {
         <SearchForm />
 
         <Suggestions>
-          {suggestions.map((suggestion) => (
+          {suggestions.map(({ query, yearStart, yearEnd }) => (
             <Suggestions.Item
-              key={suggestion}
+              key={query}
               to="/search"
-              search={{ query: suggestion }}
+              search={{ query, yearStart, yearEnd }}
             >
-              {suggestion}
+              {query}
             </Suggestions.Item>
           ))}
         </Suggestions>

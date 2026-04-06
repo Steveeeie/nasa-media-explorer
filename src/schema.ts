@@ -145,6 +145,8 @@ const searchPageParams = z.object({
   query: z.string(),
   page: z.coerce.number().optional(),
   type: nasaMediaType.optional(),
+  yearStart: z.coerce.number().optional(),
+  yearEnd: z.coerce.number().optional(),
 });
 
 export {

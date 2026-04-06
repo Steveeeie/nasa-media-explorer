@@ -43,4 +43,16 @@ describe("Home", () => {
       .poll(() => router.state.location.search)
       .toMatchObject({ query: "Earth" });
   });
+
+  test("Artemis suggestion includes date range for Artemis 2 mission", async () => {
+    const { screen, router } = await renderWithRouter({ initialEntries: ["/"] });
+
+    await userEvent.click(screen.getByRole("link", { name: "Artemis" }));
+
+    await expect.poll(() => router.state.location.pathname).toBe("/search");
+
+    await expect
+      .poll(() => router.state.location.search)
+      .toMatchObject({ query: "Artemis", yearStart: 2026, yearEnd: 2026 });
+  });
 });
