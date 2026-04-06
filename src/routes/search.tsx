@@ -51,7 +51,7 @@ function Search() {
               alt="NASA"
               width={142}
               height={40}
-              loading="eager"
+              fetchPriority="high"
             />
           </Link>
 
