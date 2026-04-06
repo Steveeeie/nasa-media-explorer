@@ -9,12 +9,12 @@ interface ItemProps extends LinkProps {
 
 function Item({ active, ...rest }: ItemProps) {
   return (
-    <li>
-      <Link
-        className={classNames(styles.item, active && styles.active)}
-        {...rest}
-      />
-    </li>
+    <Link
+      role="tab"
+      aria-selected={active}
+      className={classNames(styles.item, active && styles.active)}
+      {...rest}
+    />
   );
 }
 
@@ -24,8 +24,8 @@ interface FiltersProps {
 
 function Filters({ label, children }: PropsWithChildren<FiltersProps>) {
   return (
-    <nav className={styles.group}>
-      <ul aria-label={label}>{children}</ul>
+    <nav className={styles.group} role="tablist" aria-label={label}>
+      {children}
     </nav>
   );
 }

@@ -48,7 +48,7 @@ describe("Search", () => {
       initialEntries: ["/search?query=Moon"],
     });
 
-    await userEvent.click(screen.getByRole("link", { name: "Images" }));
+    await userEvent.click(screen.getByRole("tab", { name: "Images" }));
 
     await expect.poll(() => router.state.location.search.type).toBe("image");
 
@@ -79,7 +79,7 @@ describe("Search", () => {
       initialEntries: ["/search?query=Moon"],
     });
 
-    await userEvent.click(screen.getByRole("link", { name: "Videos" }));
+    await userEvent.click(screen.getByRole("tab", { name: "Videos" }));
 
     await expect.poll(() => router.state.location.search.type).toBe("video");
 
@@ -116,7 +116,7 @@ describe("Search", () => {
       initialEntries: ["/search?query=Moon"],
     });
 
-    await userEvent.click(screen.getByRole("link", { name: "Audio" }));
+    await userEvent.click(screen.getByRole("tab", { name: "Audio" }));
 
     await expect.poll(() => router.state.location.search.type).toBe("audio");
 
@@ -244,13 +244,13 @@ describe("Search", () => {
       initialEntries: ["/search?query=Artemis&yearStart=2026&yearEnd=2026"],
     });
 
-    await userEvent.click(screen.getByRole("link", { name: "Videos" }));
+    await userEvent.click(screen.getByRole("tab", { name: "Videos" }));
 
     await expect
       .poll(() => router.state.location.search)
       .toMatchObject({ query: "Artemis", type: "video", yearStart: 2026, yearEnd: 2026 });
 
-    await userEvent.click(screen.getByRole("link", { name: "Audio" }));
+    await userEvent.click(screen.getByRole("tab", { name: "Audio" }));
 
     await expect
       .poll(() => router.state.location.search)
