@@ -17,12 +17,14 @@ function Item({ id, title, thumbnail, description }: ItemProps) {
     <li className={classNames(styles.item, loaded && styles.loaded)}>
       <Link to="/video/$id" params={{ id }}>
         {thumbnail && (
-          <img
-            className={styles.image}
-            src={thumbnail}
-            alt={title}
-            onLoad={() => setLoaded(true)}
-          />
+          <div className={styles.imageWrapper}>
+            <img
+              className={styles.image}
+              src={thumbnail}
+              alt={title}
+              onLoad={() => setLoaded(true)}
+            />
+          </div>
         )}
 
         <div className={styles.content}>

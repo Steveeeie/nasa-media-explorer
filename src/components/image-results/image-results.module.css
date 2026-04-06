@@ -13,12 +13,22 @@
   opacity: 1;
 }
 
-.image {
+.imageWrapper {
   border-radius: var(--radius-2);
+  overflow: hidden;
+}
+
+.image {
   aspect-ratio: 1;
+  display: block;
   object-fit: cover;
   object-position: center;
+  transition: transform 0.2s ease-in-out;
   width: 100%;
+}
+
+.item:hover .image {
+  transform: scale(1.05);
 }
 
 .heading {

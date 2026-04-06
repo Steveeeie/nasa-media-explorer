@@ -21,6 +21,7 @@
 
 .button.secondary {
   background-color: var(--color-dark);
+  border: 1px solid var(--color-border-light);
   color: var(--color-text-light-secondary);
 }
 

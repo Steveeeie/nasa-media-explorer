@@ -20,13 +20,24 @@
   opacity: 1;
 }
 
-.image {
-  aspect-ratio: 16 / 9;
+.imageWrapper {
   border-radius: var(--radius-2);
   flex: none;
+  overflow: hidden;
+  width: 100%;
+}
+
+.image {
+  aspect-ratio: 16 / 9;
+  display: block;
   object-fit: cover;
   object-position: center;
+  transition: transform 0.2s ease-in-out;
   width: 100%;
+}
+
+.item:hover .image {
+  transform: scale(1.05);
 }
 
 .content {
@@ -60,7 +71,7 @@
     gap: var(--spacing-4);
   }
 
-  .image {
+  .imageWrapper {
     align-self: flex-start;
     max-width: 30%;
   }
