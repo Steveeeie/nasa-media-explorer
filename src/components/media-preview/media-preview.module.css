@@ -14,6 +14,7 @@
   bottom: 0;
   height: 100%;
   max-width: 100%;
+  object-fit: contain;
   position: absolute;
   top: 0;
 }
