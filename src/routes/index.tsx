@@ -41,7 +41,8 @@ function Home() {
           src={`${import.meta.env.BASE_URL}logo.svg`}
           alt="NASA"
           width={200}
-          loading="eager"
+          height={200}
+          fetchPriority="high"
         />
 
         <h1 className="sr-only">NASA Media Explorer</h1>
