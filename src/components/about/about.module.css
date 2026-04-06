@@ -10,12 +10,12 @@
   font-size: var(--font-size-small);
   font-weight: var(--font-weight-light);
   gap: var(--spacing-2);
-  margin-top: var(--spacing-5);
   max-width: 640px;
   padding-left: var(--spacing-3);
   padding-right: var(--spacing-4);
   padding: var(--spacing-2);
   width: 100%;
+  margin: 0 auto;
 }
 
 .cta {
@@ -29,8 +29,13 @@
   margin-left: var(--spacing-1);
 }
 
-@media (max-width: 1024px) or (max-height: 768px) {
+@media (max-width: 479px) {
   .wrapper {
-    display: none;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .cta {
+    margin-left: 0;
   }
 }

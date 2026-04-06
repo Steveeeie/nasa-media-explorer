@@ -109,6 +109,8 @@ function Video() {
           </>
         )}
       </Layout.Main>
+
+      <Layout.Footer />
     </Layout>
   );
 }

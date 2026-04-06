@@ -45,9 +45,8 @@ function Search() {
     <Layout>
       <Layout.Header>
         <div className={styles.form}>
-          <Link to="/">
+          <Link to="/" className={styles.logo}>
             <img
-              className={styles.logo}
               src={`${import.meta.env.BASE_URL}logo-worm.svg`}
               alt="NASA"
               width={142}
@@ -166,6 +165,8 @@ function Search() {
           </Pagination>
         )}
       </Layout.Main>
+
+      {!isLoading && <Layout.Footer />}
     </Layout>
   );
 }

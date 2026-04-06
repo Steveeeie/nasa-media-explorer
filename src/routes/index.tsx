@@ -64,7 +64,9 @@ function Home() {
           ))}
         </Suggestions>
 
-        <About />
+        <div className={styles.about}>
+          <About />
+        </div>
       </main>
 
       <Moon />

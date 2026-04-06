@@ -1,6 +1,7 @@
 import { type PropsWithChildren } from "react";
-import styles from "./layout.module.css";
 import { classNames } from "@eulersoft/classnames";
+import { About } from "@/components/about";
+import styles from "./layout.module.css";
 
 interface HeaderProps {
   padded?: boolean;
@@ -22,11 +23,22 @@ function Main(props: PropsWithChildren) {
   );
 }
 
+function Footer() {
+  return (
+    <footer className={styles.footer}>
+      <div className={styles.container}>
+        <About />
+      </div>
+    </footer>
+  );
+}
+
 function Layout(props: PropsWithChildren) {
   return <div className={styles.layout} {...props} />;
 }
 
 Layout.Header = Header;
 Layout.Main = Main;
+Layout.Footer = Footer;
 
 export { Layout };

@@ -99,6 +99,8 @@ function Audio() {
           </>
         )}
       </Layout.Main>
+
+      <Layout.Footer />
     </Layout>
   );
 }

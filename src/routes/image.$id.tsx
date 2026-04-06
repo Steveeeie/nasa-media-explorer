@@ -107,6 +107,8 @@ function Image() {
           </>
         )}
       </Layout.Main>
+
+      <Layout.Footer />
     </Layout>
   );
 }

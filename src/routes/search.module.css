@@ -1,4 +1,8 @@
 .logo {
+  display: inline-flex;
+}
+
+.logo img {
   height: 24px;
   width: auto;
 }
@@ -16,7 +20,7 @@
     flex-direction: row;
   }
 
-  .logo {
+  .logo img {
     height: 32px;
   }
 }

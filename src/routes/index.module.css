@@ -24,6 +24,10 @@
   text-align: center;
 }
 
+.about {
+  display: none;
+}
+
 @media (min-width: 640px) {
   .content {
     gap: var(--spacing-4);
@@ -31,5 +35,10 @@
 
   .logo {
     width: 200px;
+  }
+
+  .about {
+    display: block;
+    padding-top: var(--spacing-5);
   }
 }
