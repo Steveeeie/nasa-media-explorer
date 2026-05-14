@@ -51,19 +51,19 @@ The application uses modern web features and supports:
 ### Installation
 
 ```bash
-npm install
+pnpm install
 ```
 
 Note: This application uses NASA's public images API, which **does not require an API key**.
 
 ### Scripts
 
-- `npm run dev` - Start dev server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm test` - Run tests (headless)
-- `npm run test:ui` - Open Vitest UI
-- `npm run test:coverage` - Generate coverage report
+- `pnpm dev` - Start dev server
+- `pnpm build` - Build for production
+- `pnpm preview` - Preview production build locally
+- `pnpm test` - Run tests (headless)
+- `pnpm test:ui` - Open Vitest UI
+- `pnpm test:coverage` - Generate coverage report
 
 ---
 
