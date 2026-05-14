@@ -18,6 +18,7 @@
     "three.js"
   ],
   "type": "module",
+  "packageManager": "pnpm@10.29.2",
   "scripts": {
     "dev": "vite",
     "dev:host": "vite --host",
@@ -47,6 +48,7 @@
     "@types/node": "^24.10.1",
     "@types/react": "^19.2.5",
     "@types/react-dom": "^19.2.3",
+    "@types/three": "^0.184.1",
     "@vitejs/plugin-react": "^5.1.1",
     "@vitest/browser": "^4.0.16",
     "@vitest/browser-playwright": "^4.0.16",
@@ -67,6 +69,14 @@
   "msw": {
     "workerDirectory": [
       "public"
+    ]
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "msw",
+      "playwright",
+      "playwright-core"
     ]
   }
 }
